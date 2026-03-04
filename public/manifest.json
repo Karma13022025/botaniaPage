@@ -1,0 +1,16 @@
+{
+    "name": "Botania - Terapias Holísticas y Cuarzos",
+    "short_name": "Botania",
+    "description": "Terapias holísticas, cuarzos y bienestar integral en Saltillo, Coahuila",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#F9F8F6",
+    "theme_color": "#7E9285",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "any",
+            "type": "image/x-icon"
+        }
+    ]
+}

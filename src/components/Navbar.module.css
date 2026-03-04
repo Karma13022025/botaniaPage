@@ -1,0 +1,206 @@
+/* src/components/Navbar.module.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+  background-color: rgba(249, 248, 246, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.logo a {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.8rem;
+  color: var(--color-primario);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: var(--color-primario-oscuro);
+}
+
+.enlaces {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  align-items: center;
+}
+
+.enlaces a {
+  text-decoration: none;
+  color: var(--color-texto);
+  font-size: 0.95rem;
+  font-weight: 400;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 4px 0;
+}
+
+.enlaces a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primario);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.enlaces a:hover {
+  color: var(--color-primario);
+}
+
+.enlaces a:hover::after {
+  width: 100%;
+}
+
+.ctaContainer {
+  display: flex;
+  align-items: center;
+}
+
+.btnContacto {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  border: 2px solid var(--color-primario);
+  color: var(--color-primario);
+  padding: 10px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btnContacto:hover {
+  background-color: var(--color-primario);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(126, 146, 133, 0.3);
+}
+
+/* --- HAMBURGUESA --- */
+.hamburguesa {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 200;
+}
+
+.hamburguesa span {
+  display: block;
+  width: 26px;
+  height: 2.5px;
+  background-color: var(--color-texto);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburguesa.activa span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburguesa.activa span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburguesa.activa span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* --- OVERLAY --- */
+.overlay {
+  display: none;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: flex;
+  }
+
+  .enlaces {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: var(--color-fondo);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 80px 40px;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 150;
+  }
+
+  .enlaces.abierto {
+    right: 0;
+  }
+
+  .enlaces li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .enlaces a {
+    display: block;
+    padding: 16px 0;
+    font-size: 1.15rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .enlaces a::after {
+    display: none;
+  }
+
+  .ctaContainer {
+    display: none;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 140;
+    backdrop-filter: blur(4px);
+  }
+}
+
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 1.5rem;
+  }
+
+  .enlaces {
+    width: 85%;
+  }
+}

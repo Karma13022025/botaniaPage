@@ -1,0 +1,96 @@
+/* src/components/Footer.module.css */
+.footer {
+  background: linear-gradient(135deg, var(--color-secundario), var(--color-secundario-oscuro));
+  color: white;
+  padding: 70px 5% 24px;
+  margin-top: 0;
+}
+
+.contenido {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.columna {
+  flex: 1;
+  min-width: 220px;
+}
+
+.titulo {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: var(--color-fondo);
+  letter-spacing: 0.5px;
+}
+
+.descripcion {
+  opacity: 0.8;
+  line-height: 1.7;
+  font-size: 0.93rem;
+}
+
+.enlaces {
+  list-style: none;
+  padding: 0;
+}
+
+.enlaces li {
+  margin-bottom: 12px;
+  font-size: 0.93rem;
+  opacity: 0.85;
+}
+
+.enlaces a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.enlaces a:hover {
+  opacity: 1;
+  padding-left: 6px;
+}
+
+.contactoLink {
+  color: white !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contactoLink:hover {
+  opacity: 1 !important;
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.85rem;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .columna {
+    min-width: 100%;
+  }
+
+  .enlaces a:hover {
+    padding-left: 0;
+  }
+}

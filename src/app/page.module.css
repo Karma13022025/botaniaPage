@@ -4,62 +4,627 @@
   min-height: 100vh;
 }
 
+/* === HERO === */
 .hero {
-  height: 70vh;
+  position: relative;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: var(--color-secundario); 
+  background: linear-gradient(135deg, #A89FAD 0%, #7E9285 50%, #D4A373 100%);
   color: white;
-  padding: 20px;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.15) 100%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  animation: fadeInUp 1s ease;
+}
+
+.heroTag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
 }
 
 .titulo {
-  font-size: 3rem;
-  font-weight: lighter;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .subtitulo {
   font-size: 1.2rem;
-  margin-bottom: 30px;
-  opacity: 0.9;
+  margin-bottom: 36px;
+  opacity: 0.92;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.boton {
-  background-color: var(--color-acento); 
+.heroBotones {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.botonPrimario {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-acento);
   color: white;
   border: none;
-  padding: 15px 30px;
-  font-size: 1.1rem;
+  padding: 16px 32px;
+  font-size: 1.05rem;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(212, 163, 115, 0.4);
+  transition: all 0.3s ease;
+  font-weight: 400;
 }
 
-.boton:hover {
-  transform: scale(1.05);
+.botonPrimario:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(212, 163, 115, 0.5);
+  background-color: var(--color-acento-oscuro);
 }
 
-.seccion {
-  padding: 80px 20px;
+.botonSecundario {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  padding: 14px 30px;
+  font-size: 1.05rem;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 400;
+}
+
+.botonSecundario:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: white;
+  transform: translateY(-3px);
+}
+
+.heroDecoracion {
+  position: absolute;
+  bottom: -20px;
+  display: flex;
+  gap: 60px;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.cristal {
+  font-size: 6rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+.cristal:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.cristal:nth-child(3) {
+  animation-delay: 2s;
+}
+
+/* === SERVICIOS === */
+.servicios {
+  padding: 100px 5%;
   text-align: center;
   background-color: var(--color-fondo);
 }
 
-/* Agregué estas dos clases para limpiar también el HTML de abajo */
-.tituloSeccion {
+.seccionTitulo {
   color: var(--color-primario);
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+.seccionSub {
+  color: var(--color-texto-suave);
+  max-width: 550px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.serviciosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.servicioCard {
+  background: white;
+  padding: 40px 30px;
+  border-radius: var(--radio-borde);
+  box-shadow: var(--sombra-suave);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.servicioCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--sombra-media);
+}
+
+.servicioIcono {
+  font-size: 2.8rem;
   margin-bottom: 20px;
 }
 
-.textoSeccion {
+.servicioCard h3 {
+  color: var(--color-primario);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.servicioCard p {
   color: var(--color-texto-suave);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.servicioLink {
+  color: var(--color-acento);
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.servicioLink:hover {
+  color: var(--color-acento-oscuro);
+}
+
+/* === SOBRE NOSOTROS === */
+.sobre {
+  padding: 100px 5%;
+  background-color: var(--color-fondo-alt);
+}
+
+.sobreContenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.sobreTag {
+  display: inline-block;
+  color: var(--color-acento);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.sobreTitulo {
+  color: var(--color-primario);
+  font-size: 2rem;
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+
+.sobreDesc {
+  color: var(--color-texto-suave);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.sobreBoton {
+  display: inline-block;
+  margin-top: 16px;
+  background-color: var(--color-primario);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.sobreBoton:hover {
+  background-color: var(--color-primario-oscuro);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(126, 146, 133, 0.3);
+}
+
+.sobreImagen {
+  display: flex;
+  justify-content: center;
+}
+
+.imagenPlaceholder {
+  width: 100%;
+  max-width: 420px;
+  height: 380px;
+  background: linear-gradient(135deg, #e8e4df, #d8d4cf);
+  border-radius: var(--radio-borde);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-texto-suave);
+  font-style: italic;
+  font-size: 0.95rem;
+  gap: 12px;
+  box-shadow: var(--sombra-suave);
+}
+
+.imagenPlaceholder span {
+  font-size: 3rem;
+  font-style: normal;
+}
+
+/* === CUARZOS PREVIEW === */
+.cuarzosPreview {
+  padding: 100px 5%;
+  text-align: center;
+  background-color: var(--color-fondo);
+}
+
+.cuarzosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.cuarzoMini {
+  background: white;
+  padding: 32px 20px;
+  border-radius: var(--radio-borde);
+  box-shadow: var(--sombra-suave);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cuarzoMini:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-media);
+}
+
+.cuarzoMiniImg {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.cuarzoMini h4 {
+  color: var(--color-primario);
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.cuarzoMini p {
+  color: var(--color-texto-suave);
+  font-size: 0.85rem;
+}
+
+.verTodosBtn {
+  display: inline-block;
+  color: var(--color-primario);
+  border: 2px solid var(--color-primario);
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.verTodosBtn:hover {
+  background-color: var(--color-primario);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(126, 146, 133, 0.3);
+}
+
+/* === TESTIMONIOS === */
+.testimonios {
+  padding: 100px 5%;
+  background-color: var(--color-fondo-alt);
+  text-align: center;
+}
+
+.testimoniosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonio {
+  background: white;
+  padding: 36px 30px;
+  border-radius: var(--radio-borde);
+  box-shadow: var(--sombra-suave);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.testimonio:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-media);
+}
+
+.testimonioEstrellas {
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.testimonioTexto {
+  color: var(--color-texto);
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.testimonioAutor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.autorAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.testimonioAutor strong {
+  display: block;
+  color: var(--color-texto);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.testimonioAutor span {
+  color: var(--color-texto-suave);
+  font-size: 0.8rem;
+}
+
+/* === CTA FINAL === */
+.ctaFinal {
+  padding: 100px 5%;
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaFinal::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.ctaContenido {
+  position: relative;
+  z-index: 2;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.ctaTitulo {
+  font-size: 2.4rem;
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+
+.ctaTexto {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 36px;
   line-height: 1.6;
+}
+
+.ctaBotones {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.ctaBotonPrimario {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: white;
+  color: var(--color-primario);
+  padding: 16px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.ctaBotonPrimario:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.2);
+}
+
+.ctaBotonWhatsApp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.3);
+}
+
+.ctaBotonWhatsApp:hover {
+  transform: translateY(-3px) scale(1.03);
+  background-color: #128C7E;
+  box-shadow: 0 10px 32px rgba(37, 211, 102, 0.4);
+}
+
+.ctaNumero {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  opacity: 0.8;
+  font-family: var(--font-playfair), serif;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
+  }
+
+  .hero {
+    min-height: 70vh;
+    padding: 30px 20px;
+  }
+
+  .heroDecoracion {
+    gap: 30px;
+  }
+
+  .cristal {
+    font-size: 3.5rem;
+  }
+
+  .servicios,
+  .sobre,
+  .cuarzosPreview,
+  .testimonios,
+  .ctaFinal {
+    padding: 70px 5%;
+  }
+
+  .seccionTitulo {
+    font-size: 1.8rem;
+  }
+
+  .sobreContenido {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .sobreTexto {
+    text-align: center;
+  }
+
+  .imagenPlaceholder {
+    height: 280px;
+  }
+
+  .ctaTitulo {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 2rem;
+  }
+
+  .heroBotones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .botonPrimario,
+  .botonSecundario {
+    width: 100%;
+    justify-content: center;
+    max-width: 280px;
+  }
+
+  .serviciosGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cuarzosGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimoniosGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaBotones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaBotonPrimario,
+  .ctaBotonWhatsApp {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
 }

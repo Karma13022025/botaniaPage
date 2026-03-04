@@ -1,33 +1,144 @@
 :root {
-  --color-fondo: #F9F8F6; 
-  --color-texto: #4A4A4A; 
-  --color-texto-suave: #7A7A7A; 
-  --color-primario: #7E9285; 
-  --color-secundario: #A89FAD; 
-  --color-acento: #D4A373; 
-  --color-tarjetas: #FFFFFF; 
+  --color-fondo: #F9F8F6;
+  --color-texto: #4A4A4A;
+  --color-texto-suave: #7A7A7A;
+  --color-primario: #7E9285;
+  --color-primario-oscuro: #5d7466;
+  --color-secundario: #A89FAD;
+  --color-secundario-oscuro: #8a7f90;
+  --color-acento: #D4A373;
+  --color-acento-oscuro: #c08b56;
+  --color-tarjetas: #FFFFFF;
+  --color-fondo-alt: #F1EFEC;
+  --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --sombra-media: 0 10px 40px rgba(0, 0, 0, 0.08);
+  --sombra-fuerte: 0 20px 60px rgba(0, 0, 0, 0.12);
+  --radio-borde: 16px;
+  --transicion: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Reset básico para que todo se vea limpio */
+/* Reset básico */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-fondo);
   color: var(--color-texto);
-  font-family: 'Arial', sans-serif; /* Luego le pondremos una fuente más elegante */
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
 }
 
 /* --- TIPOGRAFÍAS --- */
 h1, h2, h3, h4 {
   font-family: var(--font-playfair), serif;
-  font-weight: 400; /* Las fuentes elegantes lucen mejor delgadas */
+  font-weight: 400;
 }
 
-body, p, a, button, span {
+body, p, a, button, span, input, textarea {
   font-family: var(--font-lato), sans-serif;
   font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- ANIMACIONES GLOBALES --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* --- UTILIDADES --- */
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* --- SELECCIÓN DE TEXTO --- */
+::selection {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+/* --- SCROLLBAR PERSONALIZADA --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-fondo);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secundario);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secundario-oscuro);
 }
