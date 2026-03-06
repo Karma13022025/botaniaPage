@@ -61,9 +61,8 @@ export default function Contacto() {
                     <div className={styles.infoCard}>
                         <h3 className={styles.infoTitulo}>🕐 Horarios</h3>
                         {/* PLACEHOLDER: Reemplaza con tus horarios reales */}
-                        <p>Lunes a Viernes: 9:00 AM - 7:00 PM</p>
-                        <p>Sábados: 10:00 AM - 3:00 PM</p>
-                        <p className={styles.infoDetalle}>Domingos: Cerrado</p>
+                        <p>Sabados y Domingos: 10:00 AM - 7:00 PM</p>
+                        <p className={styles.infoDetalle}>Lunes a Viernes: Cerrado</p>
                     </div>
                     <div className={styles.infoCard}>
                         <h3 className={styles.infoTitulo}>✉️ Email</h3>
