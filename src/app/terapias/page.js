@@ -62,6 +62,7 @@ export default function Terapias() {
             titulo="Reiki"
             descripcion="Técnica de canalización de energía universal para armonizar el cuerpo y la mente, promoviendo la auto-sanación."
             textoBoton="Agendar Sesión"
+            imagen={{ src: '/images/reiki-nueva.webp', alt: 'Terapia de Reiki' }}
           />
         </div>
       </section>
