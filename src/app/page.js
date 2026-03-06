@@ -196,9 +196,6 @@ export default function InicioTerapias() {
               💬 WhatsApp
             </a>
           </div>
-          <p className={styles.ctaNumero}>
-            844-392-1858
-          </p>
         </div>
       </section>
     </main>
