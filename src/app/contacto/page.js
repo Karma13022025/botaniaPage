@@ -56,7 +56,6 @@ export default function Contacto() {
                         <h3 className={styles.infoTitulo}>📍 Ubicación</h3>
                         {/* PLACEHOLDER: Reemplaza con tu dirección real */}
                         <p>Saltillo, Coahuila</p>
-                        <p className={styles.infoDetalle}>Colonia y calle por confirmar</p>
                     </div>
                     <div className={styles.infoCard}>
                         <h3 className={styles.infoTitulo}>🕐 Horarios</h3>
