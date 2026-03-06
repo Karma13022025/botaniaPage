@@ -1,16 +1,21 @@
 // src/components/Tarjeta.js
 import React from 'react';
+import Image from 'next/image';
 import styles from './Tarjeta.module.css';
 
-export default function Tarjeta({ titulo, descripcion, precio, textoBoton }) {
+export default function Tarjeta({ titulo, descripcion, precio, textoBoton, imagen }) {
   return (
     <div className={styles.tarjeta}>
-
-      {/* 📸 PLACEHOLDER: Cuando tengas imágenes reales, sustituye por <Image> de Next.js */}
-      <div className={styles.imagenPlaceholder}>
-        <span className={styles.placeholderEmoji}>📸</span>
-        <span>Espacio para foto de {titulo}</span>
-      </div>
+      {imagen ? (
+        <div className={styles.imagenReal}>
+          <Image src={imagen.src} alt={imagen.alt || titulo} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
+        </div>
+      ) : (
+        <div className={styles.imagenPlaceholder}>
+          <span className={styles.placeholderEmoji}>📸</span>
+          <span>Espacio para foto de {titulo}</span>
+        </div>
+      )}
 
       <div className={styles.contenido}>
         <h3 className={styles.titulo}>{titulo}</h3>

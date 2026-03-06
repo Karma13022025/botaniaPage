@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './page.module.css';
 
 export default function InicioTerapias() {
@@ -22,11 +23,6 @@ export default function InicioTerapias() {
               💎 Conoce los Cuarzos
             </Link>
           </div>
-        </div>
-        <div className={styles.heroDecoracion}>
-          <span className={styles.cristal}>◇</span>
-          <span className={styles.cristal}>◇</span>
-          <span className={styles.cristal}>◇</span>
         </div>
       </header>
 
@@ -81,10 +77,8 @@ export default function InicioTerapias() {
             </a>
           </div>
           <div className={styles.sobreImagen}>
-            {/* PLACEHOLDER: Sube una foto de tu espacio aquí */}
-            <div className={styles.imagenPlaceholder}>
-              <span>📸</span>
-              <p>Foto de tu espacio o de ti trabajando</p>
+            <div className={styles.imagenReal} style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '16px', overflow: 'hidden' }}>
+              <Image src="/images/masaje-relajante.webp" alt="Masaje relajante" fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
             </div>
           </div>
         </div>
@@ -99,31 +93,31 @@ export default function InicioTerapias() {
         <div className={styles.cuarzosGrid}>
           <div className={styles.cuarzoMini}>
             <div className={styles.cuarzoMiniImg}>
-              <span>💜</span>
+              <Image src="/images/cristales-amatista-citrino.webp" alt="Amatista y Citrino" fill sizes="(max-width: 768px) 50vw, 25vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
             </div>
             <h4>Amatista</h4>
             <p>Paz y espiritualidad</p>
           </div>
           <div className={styles.cuarzoMini}>
             <div className={styles.cuarzoMiniImg}>
-              <span>🩷</span>
+              <Image src="/images/cristales-rojos-rosas.webp" alt="Cuarzo Rosa y Carneliana" fill sizes="(max-width: 768px) 50vw, 25vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
             </div>
             <h4>Cuarzo Rosa</h4>
             <p>Amor y sanación emocional</p>
           </div>
           <div className={styles.cuarzoMini}>
             <div className={styles.cuarzoMiniImg}>
-              <span>🤍</span>
+              <Image src="/images/dijes-corazon-variados.webp" alt="Dijes de Corazón" fill sizes="(max-width: 768px) 50vw, 25vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
             </div>
-            <h4>Cuarzo Cristal</h4>
-            <p>Claridad y amplificación</p>
+            <h4>Colección de Dijes</h4>
+            <p>Lleva tu magia cerca</p>
           </div>
           <div className={styles.cuarzoMini}>
             <div className={styles.cuarzoMiniImg}>
-              <span>🖤</span>
+              <Image src="/images/cristales-verdes-negros.webp" alt="Turmalina y Jade" fill sizes="(max-width: 768px) 50vw, 25vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
             </div>
-            <h4>Obsidiana</h4>
-            <p>Protección y energía</p>
+            <h4>Protección</h4>
+            <p>Fuerza natural y energía</p>
           </div>
         </div>
         <Link href="/cuarzos" className={styles.verTodosBtn}>

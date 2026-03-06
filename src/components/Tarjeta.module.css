@@ -15,6 +15,21 @@
   box-shadow: var(--sombra-media);
 }
 
+.imagenReal {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f0ede8, #e4e0db);
+}
+
+.imagenReal img {
+  transition: transform 0.5s ease;
+}
+
+.tarjeta:hover .imagenReal img {
+  transform: scale(1.08);
+}
+
 .imagenPlaceholder {
   height: 220px;
   background: linear-gradient(135deg, #f0ede8, #e4e0db);

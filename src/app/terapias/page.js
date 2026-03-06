@@ -34,31 +34,28 @@ export default function Terapias() {
             titulo="Masaje Relajante"
             descripcion="Terapia suave con aceites esenciales de lavanda y eucalipto para liberar la tensión muscular y mental acumulada."
             textoBoton="Agendar Masaje"
+            imagen={{ src: '/images/masaje-relajante-tarjeta.webp', alt: 'Masaje Relajante' }}
           />
 
           <Tarjeta
             titulo="Piedras Calientes"
             descripcion="Técnica milenaria que utiliza piedras volcánicas a temperatura ideal para descontracturar los músculos profundos."
             textoBoton="Agendar Terapia"
+            imagen={{ src: '/images/piedras-calientes.webp', alt: 'Masaje con Piedras Calientes' }}
           />
 
           <Tarjeta
             titulo="Alineación de Chakras"
             descripcion="Sesión energética utilizando cuarzos específicos para cada centro de energía, restaurando tu flujo vital."
             textoBoton="Agendar Sesión"
-          />
-
-          {/* PLACEHOLDER: Agrega más terapias según tu oferta */}
-          <Tarjeta
-            titulo="Reflexología"
-            descripcion="Estimulación de puntos reflejos en los pies que corresponden a diferentes órganos y sistemas del cuerpo."
-            textoBoton="Agendar Sesión"
+            imagen={{ src: '/images/alineacion-chakras.webp', alt: 'Alineación de Chakras' }}
           />
 
           <Tarjeta
             titulo="Aromaterapia"
             descripcion="Uso terapéutico de aceites esenciales puros para promover el bienestar físico, mental y emocional."
             textoBoton="Agendar Sesión"
+            imagen={{ src: '/images/aromaterapia.webp', alt: 'Aromaterapia' }}
           />
 
           <Tarjeta
