@@ -72,20 +72,6 @@ export default function Contacto() {
                 </div>
             </section>
 
-            {/* --- MAPA PLACEHOLDER --- */}
-            <section className={styles.mapa}>
-                <h2 className={styles.mapaTitulo}>Encuéntranos</h2>
-                {/* PLACEHOLDER: Reemplaza con tu embed de Google Maps real */}
-                <div className={styles.mapaPlaceholder}>
-                    <span>🗺️</span>
-                    <p>Aquí irá el mapa de Google Maps</p>
-                    <p className={styles.mapaInstrucciones}>
-                        Para agregar tu mapa: ve a Google Maps, busca tu dirección,
-                        haz clic en &quot;Compartir&quot; → &quot;Incorporar un mapa&quot; y pega el código aquí.
-                    </p>
-                </div>
-            </section>
-
             {/* --- FAQ RÁPIDO --- */}
             <section className={styles.faq}>
                 <h2 className={styles.faqTitulo}>Preguntas Frecuentes</h2>
