@@ -64,6 +64,27 @@ export default function Terapias() {
             textoBoton="Agendar Sesión"
             imagen={{ src: '/images/terapias/reiki-nueva.webp', alt: 'Terapia de Reiki' }}
           />
+
+          <Tarjeta
+            titulo="Masaje Descontracturante"
+            descripcion="Terapia enfocada en liberar la tensión crónica y desarmar las contracturas musculares ocasionadas por estrés o malas posturas."
+            textoBoton="Agendar Sesión"
+            imagen={{ src: '/images/terapias/masaje-descontracturante.webp', alt: 'Masaje Descontracturante' }}
+          />
+
+          <Tarjeta
+            titulo="Masaje Circulatorio"
+            descripcion="Técnica que estimula el flujo sanguíneo y linfático. Ideal para piernas cansadas, retención de líquidos y pesadez general."
+            textoBoton="Agendar Sesión"
+            imagen={{ src: '/images/terapias/masaje-circulatorio.webp', alt: 'Masaje Circulatorio' }}
+          />
+
+          <Tarjeta
+            titulo="Masaje de Tejido Profundo"
+            descripcion="Presión firme y profunda para llegar a las capas más internas del músculo. Excelente para deportistas o dolor crónico severo."
+            textoBoton="Agendar Sesión"
+            imagen={{ src: '/images/terapias/masaje-tejido-profundo.webp', alt: 'Masaje de Tejido Profundo' }}
+          />
         </div>
       </section>
 
