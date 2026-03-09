@@ -17,28 +17,28 @@ export const metadata = {
 const cuarzos = [
   {
     nombre: 'Amatista',
-    imagen: '/images/cristales-amatista-citrino.webp',
+    imagen: '/images/cuarzos/cristales-amatista-citrino.webp',
     propiedad: 'Paz y Espiritualidad',
     descripcion: 'Piedra de la sabiduría espiritual. Ayuda a calmar la mente, fomentar la intuición y proteger de energías negativas. Ideal para meditación.',
     chakra: 'Corona y Tercer Ojo',
   },
   {
     nombre: 'Cuarzo Rosa',
-    imagen: '/images/cristales-rojos-rosas.webp',
+    imagen: '/images/cuarzos/cristales-rojos-rosas.webp',
     propiedad: 'Amor y Sanación Emocional',
     descripcion: 'La piedra del amor incondicional. Abre el corazón para dar y recibir amor, sana heridas emocionales y fomenta la autoestima.',
     chakra: 'Corazón',
   },
   {
     nombre: 'Turmalina Negra',
-    imagen: '/images/cristales-verdes-negros.webp',
+    imagen: '/images/cuarzos/cristales-verdes-negros.webp',
     propiedad: 'Escudo Energético',
     descripcion: 'El escudo protector por excelencia. Repele pesadez, alivia el estrés y promueve una fuerte actitud arraigada y equilibrada.',
     chakra: 'Raíz',
   },
   {
     nombre: 'Dijes de Corazón',
-    imagen: '/images/dijes-corazon-variados.webp',
+    imagen: '/images/cuarzos/dijes-corazon-variados.webp',
     propiedad: 'Amor y Conexión',
     descripcion: 'Lleva la magia contigo. Nuestros dijes tallados aseguran que la vibración de tu cristal elegido permanezca contigo a lo largo del día.',
     chakra: 'Corazón',

@@ -16,7 +16,7 @@
 }
 
 .imagenReal {
-  height: 220px;
+  height: 350px;
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #f0ede8, #e4e0db);
@@ -31,7 +31,7 @@
 }
 
 .imagenPlaceholder {
-  height: 220px;
+  height: 350px;
   background: linear-gradient(135deg, #f0ede8, #e4e0db);
   display: flex;
   flex-direction: column;

@@ -1,0 +1,162 @@
+/* src/app/microdosis/page.module.css */
+
+.contenedor {
+  min-height: 60vh;
+}
+
+/* === HERO === */
+.hero {
+  padding: 100px 5% 60px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-primario), #94b19e);
+  color: white;
+}
+
+.heroTag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.titulo {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.descripcion {
+  font-size: 1.1rem;
+  max-width: 550px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* === GRID DE MICRODOSIS === */
+.microdosis {
+  padding: 80px 5%;
+  background-color: var(--color-fondo);
+}
+
+.microdosisGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* === CTA === */
+.cta {
+  padding: 80px 5%;
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-acento), var(--color-acento-oscuro));
+  color: white;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.cta p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.ctaBotones {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaBoton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  color: var(--color-acento-oscuro);
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.ctaBoton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.2);
+}
+
+.ctaBotonWA {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.3);
+}
+
+.ctaBotonWA:hover {
+  transform: translateY(-3px);
+  background: #128C7E;
+  box-shadow: 0 10px 32px rgba(37, 211, 102, 0.4);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 5% 50px;
+  }
+
+  .titulo {
+    font-size: 2.2rem;
+  }
+
+  .microdosisGrid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .cta h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.9rem;
+  }
+
+  .ctaBotones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaBoton,
+  .ctaBotonWA {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}

@@ -155,6 +155,22 @@ const jsonLd = {
           description: 'Uso terapéutico de aceites esenciales para bienestar integral.',
         },
       },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Product',
+          name: 'Microdosis de Herbolaria',
+          description: 'Extractos naturales concentrados para ansiedad, descanso y digestión.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Product',
+          name: 'Cuarzos Energéticos',
+          description: 'Selección de cristales y piedras naturales para equilibrio y protección.',
+        },
+      },
     ],
   },
 };

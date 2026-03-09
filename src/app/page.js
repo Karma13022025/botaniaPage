@@ -78,7 +78,7 @@ export default function InicioTerapias() {
           </div>
           <div className={styles.sobreImagen}>
             <div className={styles.imagenReal} style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '16px', overflow: 'hidden' }}>
-              <Image src="/images/masaje-relajante.webp" alt="Masaje relajante" fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
+              <Image src="/images/terapias/masaje-relajante.webp" alt="Masaje relajante" fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
             </div>
           </div>
         </div>
@@ -93,28 +93,28 @@ export default function InicioTerapias() {
         <div className={styles.cuarzosGrid}>
           <div className={styles.cuarzoMini}>
             <div className={styles.cuarzoMiniImg}>
-              <Image src="/images/cristales-amatista-citrino.webp" alt="Amatista y Citrino" fill sizes="(max-width: 768px) 50vw, 25vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
+              <Image src="/images/cuarzos/cristales-amatista-citrino.webp" alt="Amatista y Citrino" fill sizes="(max-width: 768px) 50vw, 25vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
             </div>
             <h4>Amatista</h4>
             <p>Paz y espiritualidad</p>
           </div>
           <div className={styles.cuarzoMini}>
             <div className={styles.cuarzoMiniImg}>
-              <Image src="/images/cristales-rojos-rosas.webp" alt="Cuarzo Rosa y Carneliana" fill sizes="(max-width: 768px) 50vw, 25vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
+              <Image src="/images/cuarzos/cristales-rojos-rosas.webp" alt="Cuarzo Rosa y Carneliana" fill sizes="(max-width: 768px) 50vw, 25vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
             </div>
             <h4>Cuarzo Rosa</h4>
             <p>Amor y sanación emocional</p>
           </div>
           <div className={styles.cuarzoMini}>
             <div className={styles.cuarzoMiniImg}>
-              <Image src="/images/dijes-corazon-variados.webp" alt="Dijes de Corazón" fill sizes="(max-width: 768px) 50vw, 25vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
+              <Image src="/images/cuarzos/dijes-corazon-variados.webp" alt="Dijes de Corazón" fill sizes="(max-width: 768px) 50vw, 25vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
             </div>
             <h4>Colección de Dijes</h4>
             <p>Lleva tu magia cerca</p>
           </div>
           <div className={styles.cuarzoMini}>
             <div className={styles.cuarzoMiniImg}>
-              <Image src="/images/cristales-verdes-negros.webp" alt="Turmalina y Jade" fill sizes="(max-width: 768px) 50vw, 25vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
+              <Image src="/images/cuarzos/cristales-verdes-negros.webp" alt="Turmalina y Jade" fill sizes="(max-width: 768px) 50vw, 25vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
             </div>
             <h4>Protección</h4>
             <p>Fuerza natural y energía</p>

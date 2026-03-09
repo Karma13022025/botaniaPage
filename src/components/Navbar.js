@@ -35,6 +35,7 @@ export default function Navbar() {
         <li><Link href="/" onClick={cerrarMenu}>Inicio</Link></li>
         <li><Link href="/terapias" onClick={cerrarMenu}>Terapias</Link></li>
         <li><Link href="/cuarzos" onClick={cerrarMenu}>Cuarzos</Link></li>
+        <li><Link href="/microdosis" onClick={cerrarMenu}>Microdosis</Link></li>
         <li><Link href="/contacto" onClick={cerrarMenu}>Contacto</Link></li>
       </ul>
 

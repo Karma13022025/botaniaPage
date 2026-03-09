@@ -23,6 +23,7 @@ export default function Footer() {
             <li><Link href="/">Inicio</Link></li>
             <li><Link href="/terapias">Terapias Holísticas</Link></li>
             <li><Link href="/cuarzos">Nuestros Cuarzos</Link></li>
+            <li><Link href="/microdosis">Microdosis Herbolarias</Link></li>
             <li><Link href="/contacto">Contacto y Citas</Link></li>
           </ul>
         </div>
