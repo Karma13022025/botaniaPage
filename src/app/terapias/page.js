@@ -32,14 +32,14 @@ export default function Terapias() {
         <div className={styles.terapiasGrid}>
           <Tarjeta
             titulo="Masaje Relajante"
-            descripcion="Terapia suave con aceites esenciales de lavanda y eucalipto para liberar la tensión muscular y mental acumulada."
+            descripcion="Terapia suave con aceites neutros para liberar la tensión muscular y mental acumulada."
             textoBoton="Agendar Masaje"
             imagen={{ src: '/images/terapias/masaje-relajante-tarjeta.webp', alt: 'Masaje Relajante' }}
           />
 
           <Tarjeta
             titulo="Piedras Calientes"
-            descripcion="Técnica milenaria que utiliza piedras volcánicas a temperatura ideal para descontracturar los músculos profundos."
+            descripcion="Técnica milenaria que utiliza piedras de basalto a temperatura ideal para descontracturar los músculos profundos."
             textoBoton="Agendar Terapia"
             imagen={{ src: '/images/terapias/piedras-calientes.webp', alt: 'Masaje con Piedras Calientes' }}
           />

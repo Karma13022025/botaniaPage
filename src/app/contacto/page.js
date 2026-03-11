@@ -84,7 +84,7 @@ export default function Contacto() {
                     <div className={styles.faqCard}>
                         <h3>¿Cuánto dura una sesión?</h3>
                         {/* PLACEHOLDER */}
-                        <p>Las sesiones varían de 45 minutos a 1.5 horas dependiendo de la terapia seleccionada.</p>
+                        <p>Las sesiones varían de 45 minutos a 60 minutos dependiendo de la terapia seleccionada.</p>
                     </div>
                     <div className={styles.faqCard}>
                         <h3>¿Qué debo llevar?</h3>

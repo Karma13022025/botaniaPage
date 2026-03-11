@@ -51,15 +51,15 @@ const cuarzos = [
     chakra: 'Plexo Solar',
   },
   {
-    nombre: 'Carneliana',
-    imagen: null, // PLACEHOLDER
+    nombre: 'Cornalina Naranja',
+    imagen: '/images/cuarzos/cristales-rojos-rosas.webp',
     propiedad: 'Pasión y Acción',
     descripcion: 'Cristal de fuego y creatividad. Estimula la motivación, ayuda a vencer la procrastinación e inyecta profunda vitalidad física.',
     chakra: 'Sacro',
   },
   {
     nombre: 'Jade Verde',
-    imagen: null, // PLACEHOLDER
+    imagen: '/images/cuarzos/cristales-verdes-negros.webp', 
     propiedad: 'Prosperidad y Serenidad',
     descripcion: 'Símbolo de pureza. Promueve el equilibrio profundo de las emociones, atrae el positivismo y fortalece tu conexión con la tierra.',
     chakra: 'Corazón',
