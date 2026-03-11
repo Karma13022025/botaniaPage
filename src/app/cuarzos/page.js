@@ -45,7 +45,7 @@ const cuarzos = [
   },
   {
     nombre: 'Citrino',
-    imagen: null, // PLACEHOLDER
+    imagen: '/images/cuarzos/citrino.webp',
     propiedad: 'Abundancia y Alegría',
     descripcion: 'Conocido como la piedra del éxito. Atrae prosperidad, estimula la creatividad y llena de energía positiva. Atrae motivación genuina.',
     chakra: 'Plexo Solar',
@@ -59,14 +59,14 @@ const cuarzos = [
   },
   {
     nombre: 'Jade Verde',
-    imagen: '/images/cuarzos/cristales-verdes-negros.webp', 
+    imagen: '/images/cuarzos/cristales-verdes-negros.webp',
     propiedad: 'Prosperidad y Serenidad',
     descripcion: 'Símbolo de pureza. Promueve el equilibrio profundo de las emociones, atrae el positivismo y fortalece tu conexión con la tierra.',
     chakra: 'Corazón',
   },
   {
     nombre: 'Colección Combinada',
-    imagen: null, // PLACEHOLDER
+    imagen: '/images/cuarzos/cuarzos-varios.webp',
     propiedad: 'Balance Energético',
     descripcion: 'Integra los diferentes polos de energía. Una colección curada que balancea desde el chakra raíz hasta la corona en sintonía perfecta.',
     chakra: 'Todos los chakras',
