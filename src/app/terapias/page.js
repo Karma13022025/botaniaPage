@@ -34,21 +34,21 @@ export default function Terapias() {
             titulo="Masaje Relajante"
             descripcion="Terapia suave con aceites neutros para liberar la tensión muscular y mental acumulada."
             textoBoton="Agendar Masaje"
-            imagen={{ src: '/images/terapias/masaje-relajante-tarjeta.webp', alt: 'Masaje Relajante' }}
+            imagen={{ src: '/images/terapias/relajante2.webp', alt: 'Masaje Relajante' }}
           />
 
           <Tarjeta
             titulo="Piedras Calientes"
             descripcion="Técnica milenaria que utiliza piedras de basalto a temperatura ideal para descontracturar los músculos profundos."
             textoBoton="Agendar Terapia"
-            imagen={{ src: '/images/terapias/piedras-calientes.webp', alt: 'Masaje con Piedras Calientes' }}
+            imagen={{ src: '/images/terapias/piedrascalientes2.webp', alt: 'Masaje con Piedras Calientes' }}
           />
 
           <Tarjeta
-            titulo="Alineación de Chakras"
+            titulo="Limpieza energética y alineación de Chakras"
             descripcion="Sesión energética utilizando cuarzos específicos para cada centro de energía, restaurando tu flujo vital."
             textoBoton="Agendar Sesión"
-            imagen={{ src: '/images/terapias/alineacion-chakras.webp', alt: 'Alineación de Chakras' }}
+            imagen={{ src: '/images/terapias/alineacionchakras2.webp', alt: 'Alineación de Chakras' }}
           />
 
           <Tarjeta
@@ -62,7 +62,7 @@ export default function Terapias() {
             titulo="Reiki"
             descripcion="Técnica de canalización de energía universal para armonizar el cuerpo y la mente, promoviendo la auto-sanación."
             textoBoton="Agendar Sesión"
-            imagen={{ src: '/images/terapias/reiki-nueva.webp', alt: 'Terapia de Reiki' }}
+            imagen={{ src: '/images/terapias/reiki2.webp', alt: 'Terapia de Reiki' }}
           />
 
           <Tarjeta
@@ -83,7 +83,7 @@ export default function Terapias() {
             titulo="Masaje de Tejido Profundo"
             descripcion="Presión firme y profunda para llegar a las capas más internas del músculo. Excelente para deportistas o dolor crónico severo."
             textoBoton="Agendar Sesión"
-            imagen={{ src: '/images/terapias/masaje-tejido-profundo.webp', alt: 'Masaje de Tejido Profundo' }}
+            imagen={{ src: '/images/terapias/masajetejidoprofundo2.webp', alt: 'Masaje de Tejido Profundo' }}
           />
         </div>
       </section>
