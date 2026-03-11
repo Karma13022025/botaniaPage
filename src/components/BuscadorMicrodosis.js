@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import Tarjeta from '../../components/Tarjeta';
-import styles from './page.module.css';
+import Tarjeta from '../components/Tarjeta';
+import styles from '../app/microdosis/page.module.css';
 
 const microdosisData = [
     { titulo: 'Fórmula AT – Artritis', descripcion: 'Optimiza riñones, hígado y sistema endocrino para el buen mantenimiento articular. Contiene plantas analgésicas y desinflamatorias. Presentación 20 ml.', imagen: { src: '/images/microdosis/formulaat.webp', alt: 'Microdosis Artritis' } },
