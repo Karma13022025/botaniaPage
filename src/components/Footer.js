@@ -56,6 +56,7 @@ export default function Footer() {
 
       <div className={styles.copyright}>
         <p>© {new Date().getFullYear()} Botania. Todos los derechos reservados.</p>
+        <Link href="/aviso-legal" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', textDecoration: 'none' }}>Aviso Legal</Link>
       </div>
     </footer>
   );

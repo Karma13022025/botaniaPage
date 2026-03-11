@@ -3,12 +3,12 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './Tarjeta.module.css';
 
-export default function Tarjeta({ titulo, descripcion, precio, textoBoton, imagen }) {
+export default function Tarjeta({ titulo, descripcion, precio, textoBoton, imagen, priority }) {
   return (
     <div className={styles.tarjeta}>
       {imagen ? (
         <div className={styles.imagenReal}>
-          <Image src={imagen.src} alt={imagen.alt || titulo} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} quality={75} loading="lazy" />
+          <Image src={imagen.src} alt={imagen.alt || titulo} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} quality={75} loading={priority ? 'eager' : 'lazy'} priority={priority || false} />
         </div>
       ) : (
         <div className={styles.imagenPlaceholder}>

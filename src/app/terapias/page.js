@@ -35,6 +35,7 @@ export default function Terapias() {
             descripcion="Terapia suave con aceites neutros para liberar la tensión muscular y mental acumulada."
             textoBoton="Agendar Masaje"
             imagen={{ src: '/images/terapias/relajante2.webp', alt: 'Masaje Relajante' }}
+            priority={true}
           />
 
           <Tarjeta
@@ -42,6 +43,7 @@ export default function Terapias() {
             descripcion="Técnica milenaria que utiliza piedras de basalto a temperatura ideal para descontracturar los músculos profundos."
             textoBoton="Agendar Terapia"
             imagen={{ src: '/images/terapias/piedrascalientes2.webp', alt: 'Masaje con Piedras Calientes' }}
+            priority={true}
           />
 
           <Tarjeta
@@ -49,6 +51,7 @@ export default function Terapias() {
             descripcion="Sesión energética utilizando cuarzos específicos para cada centro de energía, restaurando tu flujo vital."
             textoBoton="Agendar Sesión"
             imagen={{ src: '/images/terapias/alineacionchakras2.webp', alt: 'Alineación de Chakras' }}
+            priority={true}
           />
 
           <Tarjeta

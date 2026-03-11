@@ -34,6 +34,7 @@ export default function Microdosis() {
                         descripcion="Optimiza riñones, hígado y sistema endocrino para el buen mantenimiento articular. Contiene plantas analgésicas y desinflamatorias. Presentación 20 ml."
                         textoBoton="Pedir Información"
                         imagen={{ src: '/images/microdosis/formulaat.webp', alt: 'Microdosis Artritis' }}
+                        priority={true}
                     />
 
                     <Tarjeta
@@ -41,6 +42,7 @@ export default function Microdosis() {
                         descripcion="Contribuye a disminuir los niveles de ácido úrico y a procesar las purinas de los alimentos de forma más eficiente. Presentación 20 ml."
                         textoBoton="Pedir Información"
                         imagen={{ src: '/images/microdosis/acido-urico.webp', alt: 'Microdosis Ácido Úrico' }}
+                        priority={true}
                     />
 
                     <Tarjeta
@@ -48,6 +50,7 @@ export default function Microdosis() {
                         descripcion="Promueve la circulación sanguínea, reduce la inflamación y es ideal para personas con problemas de várices. Presentación 20 ml."
                         textoBoton="Pedir Información"
                         imagen={{ src: '/images/microdosis/circulacion.webp', alt: 'Microdosis Circulación' }}
+                        priority={true}
                     />
 
                     <Tarjeta
