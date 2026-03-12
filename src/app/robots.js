@@ -6,6 +6,6 @@ export default function robots() {
                 allow: '/',
             },
         ],
-        sitemap: 'https://botania.com/sitemap.xml',
+        sitemap: 'https://raicesdeluz.com/sitemap.xml',
     };
 }

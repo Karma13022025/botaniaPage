@@ -6,7 +6,7 @@ export const metadata = {
     description: 'Agenda tu cita de terapia holística o consulta sobre cuarzos en Saltillo. Llámanos al 844-392-1858 o envíanos un WhatsApp.',
     alternates: { canonical: '/contacto' },
     openGraph: {
-        title: 'Contacto y Citas | Botania',
+        title: 'Contacto y Citas | Raíces de Luz',
         description: 'Agenda tu cita de terapia holística. Llámanos o envíanos WhatsApp al 844-392-1858.',
         url: '/contacto',
     },
@@ -66,7 +66,7 @@ export default function Contacto() {
                     <div className={styles.infoCard}>
                         <h3 className={styles.infoTitulo}>✉️ Email</h3>
                         {/* PLACEHOLDER: Reemplaza con tu email real */}
-                        <p>hola@botania.com</p>
+                        <p>hola@raicesdeluz.com</p>
                         <p className={styles.infoDetalle}>Respondemos en máximo 24 horas</p>
                     </div>
                 </div>

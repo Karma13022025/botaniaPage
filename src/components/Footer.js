@@ -9,7 +9,7 @@ export default function Footer() {
 
         {/* Columna 1: Marca y descripción */}
         <div className={styles.columna}>
-          <h3 className={styles.titulo}>Botania</h3>
+          <h3 className={styles.titulo}>Raíces de Luz</h3>
           <p className={styles.descripcion}>
             Un refugio para tu paz mental y bienestar físico. Encuentra el equilibrio
             a través de nuestras terapias holísticas y la energía natural de los cuarzos.
@@ -48,14 +48,14 @@ export default function Footer() {
                 💬 WhatsApp
               </a>
             </li>
-            <li>✉️ hola@botania.com</li>
+            <li>✉️ hola@raicesdeluz.com</li>
           </ul>
         </div>
 
       </div>
 
       <div className={styles.copyright}>
-        <p>© {new Date().getFullYear()} Botania. Todos los derechos reservados.</p>
+        <p>© {new Date().getFullYear()} Raíces de Luz. Todos los derechos reservados.</p>
         <Link href="/aviso-legal" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', textDecoration: 'none' }}>Aviso Legal</Link>
       </div>
     </footer>

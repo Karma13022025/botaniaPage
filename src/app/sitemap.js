@@ -1,5 +1,5 @@
 export default function sitemap() {
-    const baseUrl = 'https://botania.com';
+    const baseUrl = 'https://raicesdeluz.com';
 
     return [
         {

@@ -4,7 +4,7 @@ import styles from './page.module.css';
 
 export const metadata = {
     title: 'Aviso Legal',
-    description: 'Aviso legal y deslinde de responsabilidad sobre los productos y servicios ofrecidos por Botania.',
+    description: 'Aviso legal y deslinde de responsabilidad sobre los productos y servicios ofrecidos por Raíces de Luz.',
     alternates: { canonical: '/aviso-legal' },
     robots: { index: true, follow: true },
 };
@@ -23,7 +23,7 @@ export default function AvisoLegal() {
                 <div className={styles.seccion}>
                     <h2>Deslinde de Responsabilidad</h2>
                     <p>
-                        Los productos herbolarios ofrecidos por <strong>Botania</strong>, incluyendo las microdosis y fórmulas
+                        Los productos herbolarios ofrecidos por <strong>Raíces de Luz</strong>, incluyendo las microdosis y fórmulas
                         herbolarias, <strong>no son medicamentos</strong> y <strong>no sustituyen el tratamiento médico profesional</strong>.
                     </p>
                     <p>
@@ -46,7 +46,7 @@ export default function AvisoLegal() {
                 <div className={styles.seccion}>
                     <h2>Terapias Holísticas</h2>
                     <p>
-                        Las terapias holísticas ofrecidas por Botania (masajes, reiki, alineación de chakras, aromaterapia,
+                        Las terapias holísticas ofrecidas por Raíces de Luz (masajes, reiki, alineación de chakras, aromaterapia,
                         entre otras) son prácticas complementarias orientadas al bienestar y la relajación.
                         <strong> No constituyen tratamientos médicos</strong> y no deben considerarse como sustitutos
                         de atención médica profesional.
@@ -57,7 +57,7 @@ export default function AvisoLegal() {
                     <h2>Uso de la Información</h2>
                     <p>
                         La información proporcionada en este sitio web es con fines informativos únicamente.
-                        Botania no se hace responsable por el uso indebido de los productos o por decisiones
+                        Raíces de Luz no se hace responsable por el uso indebido de los productos o por decisiones
                         de salud tomadas exclusivamente con base en la información de este sitio.
                     </p>
                 </div>

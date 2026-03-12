@@ -17,8 +17,8 @@ const lato = Lato({
 
 export const metadata = {
   title: {
-    default: 'Botania | Terapias Holísticas y Cuarzos en Saltillo',
-    template: '%s | Botania',
+    default: 'Raíces de Luz | Terapias Holísticas y Cuarzos en Saltillo',
+    template: '%s | Raíces de Luz',
   },
   description: 'Descubre el poder de los cuarzos y las terapias holísticas en Saltillo, Coahuila. Masajes, alineación de chakras, aromaterapia y más. Agenda tu cita: 844-392-1858.',
   keywords: [
@@ -44,24 +44,24 @@ export const metadata = {
     'plantas medicinales',
     'remedios naturales',
   ],
-  authors: [{ name: 'Botania' }],
-  creator: 'Botania',
-  publisher: 'Botania',
-  metadataBase: new URL('https://botania.com'),
+  authors: [{ name: 'Raíces de Luz' }],
+  creator: 'Raíces de Luz',
+  publisher: 'Raíces de Luz',
+  metadataBase: new URL('https://raicesdeluz.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Botania | Terapias Holísticas y Cuarzos en Saltillo',
+    title: 'Raíces de Luz | Terapias Holísticas y Cuarzos en Saltillo',
     description: 'Descubre el poder de los cuarzos y las terapias holísticas. Masajes, chakras, aromaterapia y más. Agenda tu cita.',
-    url: 'https://botania.com',
-    siteName: 'Botania',
+    url: 'https://raicesdeluz.com',
+    siteName: 'Raíces de Luz',
     locale: 'es_MX',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Botania | Terapias Holísticas y Cuarzos',
+    title: 'Raíces de Luz | Terapias Holísticas y Cuarzos',
     description: 'Terapias holísticas, cuarzos y bienestar integral en Saltillo. Agenda tu cita: 844-392-1858.',
   },
   robots: {
@@ -83,9 +83,9 @@ export const metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'HealthAndBeautyBusiness',
-  name: 'Botania',
+  name: 'Raíces de Luz',
   description: 'Terapias holísticas, cuarzos y bienestar integral en Saltillo, Coahuila. Masajes terapéuticos, alineación de chakras, reiki y más.',
-  url: 'https://botania.com',
+  url: 'https://raicesdeluz.com',
   telephone: '+528443921858',
   address: {
     '@type': 'PostalAddress',

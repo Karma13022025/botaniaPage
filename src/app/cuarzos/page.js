@@ -8,7 +8,7 @@ export const metadata = {
   description: 'Conoce las propiedades energéticas de nuestros cuarzos y cristales. Amatista, cuarzo rosa, obsidiana y más. Información detallada sobre cada piedra.',
   alternates: { canonical: '/cuarzos' },
   openGraph: {
-    title: 'Cuarzos y Cristales | Botania',
+    title: 'Cuarzos y Cristales | Raíces de Luz',
     description: 'Explora nuestra colección de cuarzos y cristales. Amatista, cuarzo rosa, obsidiana, citrino y más piedras energéticas.',
     url: '/cuarzos',
   },

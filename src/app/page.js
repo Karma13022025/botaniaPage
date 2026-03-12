@@ -62,7 +62,7 @@ export default function InicioTerapias() {
             <h2 className={styles.sobreTitulo}>Un refugio para tu bienestar</h2>
             <p className={styles.sobreDesc}>
               {/* PLACEHOLDER: Reemplaza este texto con tu historia personal */}
-              En Botania creemos en el poder de la naturaleza para sanar el cuerpo y
+              En Raíces de Luz creemos en el poder de la naturaleza para sanar el cuerpo y
               el espíritu. Nuestro espacio holístico nació del amor por las terapias
               alternativas y la conexión profunda con la energía de los cristales.
             </p>

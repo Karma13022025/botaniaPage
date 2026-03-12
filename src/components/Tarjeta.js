@@ -32,7 +32,7 @@ export default function Tarjeta({ titulo, descripcion, precio, textoBoton, image
             rel="noopener noreferrer"
             className={styles.boton}
           >
-            {textoBoton || 'Ver más'}
+            {textoBoton || 'Saber más'}
           </a>
         </div>
       </div>

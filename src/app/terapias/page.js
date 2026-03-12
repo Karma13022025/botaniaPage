@@ -8,7 +8,7 @@ export const metadata = {
   description: 'Conoce nuestras terapias holísticas en Saltillo: masajes relajantes, piedras calientes, alineación de chakras, reiki y más. Agenda tu cita al 844-392-1858.',
   alternates: { canonical: '/terapias' },
   openGraph: {
-    title: 'Terapias Holísticas | Botania',
+    title: 'Terapias Holísticas | Raíces de Luz',
     description: 'Masajes, piedras calientes, chakras, reiki, aromaterapia y reflexología. Agenda tu sesión personalizada.',
     url: '/terapias',
   },
@@ -57,7 +57,6 @@ export default function Terapias() {
           <Tarjeta
             titulo="Aromaterapia"
             descripcion="Uso terapéutico de aceites esenciales puros para promover el bienestar físico, mental y emocional."
-            textoBoton="Agendar Sesión"
             imagen={{ src: '/images/terapias/aromaterapia.webp', alt: 'Aromaterapia' }}
           />
 

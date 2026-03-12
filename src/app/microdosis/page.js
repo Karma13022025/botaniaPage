@@ -7,7 +7,7 @@ export const metadata = {
     description: 'Conoce nuestras microdosis naturales en Saltillo. Fórmulas herbolarias para artritis, diabetes, estrés, circulación, colesterol y más.',
     alternates: { canonical: '/microdosis' },
     openGraph: {
-        title: 'Microdosis Herbolarias | Botania',
+        title: 'Microdosis Herbolarias | Raíces de Luz',
         description: 'Microdosis naturales para tu bienestar. Medicina herbolaria de alta calidad para mejorar tu calidad de vida.',
         url: '/microdosis',
     },
