@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './page.module.css';
 
+// SEO específico para la página de colección de cuarzos.
 export const metadata = {
   title: 'Cuarzos y Cristales',
   description: 'Conoce las propiedades energéticas de nuestros cuarzos y cristales. Amatista, cuarzo rosa, obsidiana y más. Información detallada sobre cada piedra.',
@@ -14,6 +15,8 @@ export const metadata = {
   },
 };
 
+// Catálogo estático de piezas de cuarzo mostradas en la galería.
+// Si se migra a CMS/BD, este arreglo sería reemplazado por datos dinámicos.
 const cuarzos = [
   {
     nombre: 'Amatista',
@@ -73,6 +76,10 @@ const cuarzos = [
   }
 ];
 
+/**
+ * Página de colección de cuarzos.
+ * Muestra una galería con información de cada pieza más tips para elegir el cristal adecuado.
+ */
 export default function Cuarzos() {
   return (
     <main className={styles.contenedor}>
@@ -81,7 +88,9 @@ export default function Cuarzos() {
         <span className={styles.heroTag}>💎 Nuestra Exclusiva Selección</span>
         <h1 className={styles.titulo}>Colección de Cuarzos</h1>
         <p className={styles.descripcion}>
-          Descubre nuestra galería de piezas energéticas. Cada uno de nuestros cristales posee una vibración única para guiarte en tu camino espiritual.
+          Descubre nuestra galería de piezas energéticas. Cada uno de nuestros
+          cristales posee una vibración única para guiarte en tu camino
+          espiritual.
         </p>
       </section>
 
@@ -102,15 +111,30 @@ export default function Cuarzos() {
                     quality={75}
                   />
                 ) : (
-                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', color: 'var(--color-texto-suave)', fontStyle: 'italic', fontSize: '0.9rem' }}>
-                    <span style={{ fontSize: '2.5rem', marginBottom: '8px' }}>📸</span>
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      height: '100%',
+                      color: 'var(--color-texto-suave)',
+                      fontStyle: 'italic',
+                      fontSize: '0.9rem',
+                    }}
+                  >
+                    <span style={{ fontSize: '2.5rem', marginBottom: '8px' }}>
+                      📸
+                    </span>
                     <span>Sube foto de {cuarzo.nombre}</span>
                   </div>
                 )}
               </div>
               <div className={styles.cuarzoInfo}>
                 <h3 className={styles.cuarzoNombre}>{cuarzo.nombre}</h3>
-                <span className={styles.cuarzoPropiedad}>{cuarzo.propiedad}</span>
+                <span className={styles.cuarzoPropiedad}>
+                  {cuarzo.propiedad}
+                </span>
                 <p className={styles.cuarzoDesc}>{cuarzo.descripcion}</p>
                 <div className={styles.cuarzoChakra}>
                   <span>🔵 Chakra:</span> {cuarzo.chakra}
@@ -128,17 +152,26 @@ export default function Cuarzos() {
           <div className={styles.infoCard}>
             <span className={styles.infoIcono}>🧭</span>
             <h3>Sigue tu intuición</h3>
-            <p>El cuarzo correcto te atraerá naturalmente. Confía en lo que sientes al ver un cristal.</p>
+            <p>
+              El cuarzo correcto te atraerá naturalmente. Confía en lo que
+              sientes al ver un cristal.
+            </p>
           </div>
           <div className={styles.infoCard}>
             <span className={styles.infoIcono}>🎯</span>
             <h3>Define tu intención</h3>
-            <p>¿Buscas paz, protección, amor o claridad? Cada cuarzo tiene propiedades específicas para ti.</p>
+            <p>
+              ¿Buscas paz, protección, amor o claridad? Cada cuarzo tiene
+              propiedades específicas para ti.
+            </p>
           </div>
           <div className={styles.infoCard}>
             <span className={styles.infoIcono}>✨</span>
             <h3>Asesoría gratuita</h3>
-            <p>Te guiamos en tu elección para encontrar el cristal que mejor se adapte a tu energía.</p>
+            <p>
+              Te guiamos en tu elección para encontrar el cristal que mejor se
+              adapte a tu energía.
+            </p>
           </div>
         </div>
       </section>
@@ -146,9 +179,14 @@ export default function Cuarzos() {
       {/* --- CTA --- */}
       <section className={styles.cta}>
         <h2>¿Listo para encontrar tu amuleto?</h2>
-        <p>Escríbenos o llámanos para verificar disponibilidad de piezas y agendar una consulta.</p>
+        <p>
+          Escríbenos o llámanos para verificar disponibilidad de piezas y
+          agendar una consulta.
+        </p>
         <div className={styles.ctaBotones}>
-          <a href="tel:8443921858" className={styles.ctaBoton}>📞 Llamar Ahora</a>
+          <a href="tel:8443921858" className={styles.ctaBoton}>
+            📞 Llamar Ahora
+          </a>
           <a
             href="https://wa.me/528443921858?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20los%20cuarzos"
             target="_blank"

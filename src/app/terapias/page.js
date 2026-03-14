@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './page.module.css';
 import Tarjeta from '../../components/Tarjeta';
 
+// SEO específico para la página de terapias.
 export const metadata = {
   title: 'Terapias Holísticas',
   description: 'Conoce nuestras terapias holísticas en Saltillo: masajes relajantes, piedras calientes, alineación de chakras, reiki y más. Agenda tu cita al 844-392-1858.',
@@ -14,6 +15,10 @@ export const metadata = {
   },
 };
 
+/**
+ * Página de listado de terapias holísticas.
+ * Usa el componente Tarjeta para mostrar cada terapia con su descripción e imagen.
+ */
 export default function Terapias() {
   return (
     <main className={styles.contenedor}>
@@ -79,6 +84,13 @@ export default function Terapias() {
             descripcion="Técnica que estimula el flujo sanguíneo y linfático. Ideal para piernas cansadas, retención de líquidos y pesadez general."
             textoBoton="Agendar Sesión"
             imagen={{ src: '/images/terapias/masaje-circulatorio.webp', alt: 'Masaje Circulatorio' }}
+          />
+
+          <Tarjeta
+            titulo="Masaje en silla"
+            descripcion="Masaje práctico y breve realizado en una silla ergonómica, ideal para cuello, hombros y espalda alta. Perfecto para personas con poco tiempo."
+            textoBoton="Agendar Masaje"
+            imagen={{ src: '/images/terapias/masajeSilla.webp', alt: 'Masaje en silla' }}
           />
 
           <Tarjeta

@@ -1,18 +1,21 @@
-// src/components/Footer.js
 import Link from 'next/link';
 import styles from './Footer.module.css';
 
+/**
+ * Pie de página global del sitio.
+ * Contiene navegación secundaria, datos de contacto y enlace al aviso legal.
+ */
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.contenido}>
-
         {/* Columna 1: Marca y descripción */}
         <div className={styles.columna}>
           <h3 className={styles.titulo}>Raíces de Luz</h3>
           <p className={styles.descripcion}>
-            Un refugio para tu paz mental y bienestar físico. Encuentra el equilibrio
-            a través de nuestras terapias holísticas y la energía natural de los cuarzos.
+            Un refugio para tu paz mental y bienestar físico. Encuentra el
+            equilibrio a través de nuestras terapias holísticas y la energía
+            natural de los cuarzos.
           </p>
         </div>
 
@@ -20,11 +23,21 @@ export default function Footer() {
         <div className={styles.columna}>
           <h3 className={styles.titulo}>Explora</h3>
           <ul className={styles.enlaces}>
-            <li><Link href="/">Inicio</Link></li>
-            <li><Link href="/terapias">Terapias Holísticas</Link></li>
-            <li><Link href="/cuarzos">Nuestros Cuarzos</Link></li>
-            <li><Link href="/microdosis">Microdosis Herbolarias</Link></li>
-            <li><Link href="/contacto">Contacto y Citas</Link></li>
+            <li>
+              <Link href="/">Inicio</Link>
+            </li>
+            <li>
+              <Link href="/terapias">Terapias Holísticas</Link>
+            </li>
+            <li>
+              <Link href="/cuarzos">Nuestros Cuarzos</Link>
+            </li>
+            <li>
+              <Link href="/microdosis">Microdosis Herbolarias</Link>
+            </li>
+            <li>
+              <Link href="/contacto">Contacto y Citas</Link>
+            </li>
           </ul>
         </div>
 
@@ -51,12 +64,23 @@ export default function Footer() {
             <li>✉️ hola@raicesdeluz.com</li>
           </ul>
         </div>
-
       </div>
 
       <div className={styles.copyright}>
-        <p>© {new Date().getFullYear()} Raíces de Luz. Todos los derechos reservados.</p>
-        <Link href="/aviso-legal" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', textDecoration: 'none' }}>Aviso Legal</Link>
+        <p>
+          © {new Date().getFullYear()} Raíces de Luz. Todos los derechos
+          reservados.
+        </p>
+        <Link
+          href="/aviso-legal"
+          style={{
+            color: 'rgba(255,255,255,0.6)',
+            fontSize: '0.85rem',
+            textDecoration: 'none',
+          }}
+        >
+          Aviso Legal
+        </Link>
       </div>
     </footer>
   );

@@ -1,9 +1,14 @@
+/**
+ * Cliente: Buscador y grid de microdosis.
+ * Este componente es cliente porque usa estado local para filtrar resultados en tiempo real.
+ */
 'use client';
 
 import React, { useState } from 'react';
 import Tarjeta from '../components/Tarjeta';
 import styles from '../app/microdosis/page.module.css';
 
+// Catálogo estático de microdosis. Ajustar/expandir aquí cuando se agreguen nuevas fórmulas.
 const microdosisData = [
     { titulo: 'Fórmula AT – Artritis', descripcion: 'Optimiza riñones, hígado y sistema endocrino para el buen mantenimiento articular. Contiene plantas analgésicas y desinflamatorias. Presentación 20 ml.', imagen: { src: '/images/microdosis/formulaat.webp', alt: 'Microdosis Artritis' } },
     { titulo: 'Fórmula AU – Ácido Úrico', descripcion: 'Contribuye a disminuir los niveles de ácido úrico y a procesar las purinas de los alimentos de forma más eficiente. Presentación 20 ml.', imagen: { src: '/images/microdosis/acido-urico.webp', alt: 'Microdosis Ácido Úrico' } },
@@ -30,80 +35,88 @@ const microdosisData = [
     { titulo: 'Fórmula VR – Vías Respiratorias', descripcion: 'Alivia escurrimiento nasal, congestión, inflamación de ganglios, dolor de cabeza y principios de bronquitis. Presentación 20 ml.', imagen: { src: '/images/microdosis/vias.webp', alt: 'Microdosis Vías Respiratorias' } },
 ];
 
+/**
+ * Componente de búsqueda de microdosis.
+ * Filtra el catálogo por título y descripción, ignorando acentos y mayúsculas/minúsculas.
+ */
 export default function BuscadorMicrodosis() {
-    const [busqueda, setBusqueda] = useState('');
+  const [busqueda, setBusqueda] = useState('');
 
-    const normalizar = (texto) =>
-        texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const normalizar = (texto) =>
+    texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
-    const resultados = microdosisData.filter((item) => {
-        const termino = normalizar(busqueda);
-        return (
-            normalizar(item.titulo).includes(termino) ||
-            normalizar(item.descripcion).includes(termino)
-        );
-    });
-
+  const resultados = microdosisData.filter((item) => {
+    const termino = normalizar(busqueda);
     return (
-        <section className={styles.microdosis}>
-            {/* --- BUSCADOR --- */}
-            <div className={styles.buscadorContainer}>
-                <div className={styles.buscadorWrapper}>
-                    <span className={styles.buscadorIcono}>🔍</span>
-                    <input
-                        type="text"
-                        placeholder="Busca por nombre o padecimiento... (ej. diabetes, estrés, hígado)"
-                        value={busqueda}
-                        onChange={(e) => setBusqueda(e.target.value)}
-                        className={styles.buscadorInput}
-                        id="buscador-microdosis"
-                    />
-                    {busqueda && (
-                        <button
-                            onClick={() => setBusqueda('')}
-                            className={styles.buscadorLimpiar}
-                            aria-label="Limpiar búsqueda"
-                        >
-                            ✕
-                        </button>
-                    )}
-                </div>
-                <p className={styles.buscadorConteo}>
-                    {resultados.length === microdosisData.length
-                        ? `Mostrando las ${microdosisData.length} fórmulas disponibles`
-                        : `${resultados.length} fórmula${resultados.length !== 1 ? 's' : ''} encontrada${resultados.length !== 1 ? 's' : ''}`}
-                </p>
-            </div>
-
-            {/* --- GRID --- */}
-            {resultados.length > 0 ? (
-                <div className={styles.microdosisGrid}>
-                    {resultados.map((item, index) => (
-                        <Tarjeta
-                            key={item.titulo}
-                            titulo={item.titulo}
-                            descripcion={item.descripcion}
-                            textoBoton="Pedir Información"
-                            imagen={item.imagen}
-                            priority={index < 3}
-                        />
-                    ))}
-                </div>
-            ) : (
-                <div className={styles.sinResultados}>
-                    <span className={styles.sinResultadosIcono}>🌱</span>
-                    <h3>No encontramos esa fórmula</h3>
-                    <p>Prueba con otro término o contáctanos para asesorarte personalmente.</p>
-                    <a
-                        href="https://wa.me/528443921858?text=Hola%2C%20busco%20una%20microdosis%20para..."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.sinResultadosBoton}
-                    >
-                        💬 Pregúntanos por WhatsApp
-                    </a>
-                </div>
-            )}
-        </section>
+      normalizar(item.titulo).includes(termino) ||
+      normalizar(item.descripcion).includes(termino)
     );
+  });
+
+  return (
+    <section className={styles.microdosis}>
+      {/* --- BUSCADOR --- */}
+      <div className={styles.buscadorContainer}>
+        <div className={styles.buscadorWrapper}>
+          <span className={styles.buscadorIcono}>🔍</span>
+          <input
+            type="text"
+            placeholder="Busca por nombre o padecimiento... (ej. diabetes, estrés, hígado)"
+            value={busqueda}
+            onChange={(e) => setBusqueda(e.target.value)}
+            className={styles.buscadorInput}
+            id="buscador-microdosis"
+          />
+          {busqueda && (
+            <button
+              onClick={() => setBusqueda('')}
+              className={styles.buscadorLimpiar}
+              aria-label="Limpiar búsqueda"
+            >
+              ✕
+            </button>
+          )}
+        </div>
+        <p className={styles.buscadorConteo}>
+          {resultados.length === microdosisData.length
+            ? `Mostrando las ${microdosisData.length} fórmulas disponibles`
+            : `${resultados.length} fórmula${
+                resultados.length !== 1 ? 's' : ''
+              } encontrada${resultados.length !== 1 ? 's' : ''}`}
+        </p>
+      </div>
+
+      {/* --- GRID --- */}
+      {resultados.length > 0 ? (
+        <div className={styles.microdosisGrid}>
+          {resultados.map((item, index) => (
+            <Tarjeta
+              key={item.titulo}
+              titulo={item.titulo}
+              descripcion={item.descripcion}
+              textoBoton="Pedir Información"
+              imagen={item.imagen}
+              priority={index < 3}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className={styles.sinResultados}>
+          <span className={styles.sinResultadosIcono}>🌱</span>
+          <h3>No encontramos esa fórmula</h3>
+          <p>
+            Prueba con otro término o contáctanos para asesorarte personalmente.
+          </p>
+          <a
+            href="https://wa.me/528443921858?text=Hola%2C%20busco%20una%20microdosis%20para..."
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.sinResultadosBoton}
+          >
+            💬 Pregúntanos por WhatsApp
+          </a>
+        </div>
+      )}
+    </section>
+  );
 }

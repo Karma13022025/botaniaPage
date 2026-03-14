@@ -4,17 +4,19 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
+// Tipografías globales configuradas como CSS custom properties.
 const playfair = Playfair_Display({
   subsets: ['latin'],
-  variable: '--font-playfair'
+  variable: '--font-playfair',
 });
 
 const lato = Lato({
   weight: ['300', '400', '700'],
   subsets: ['latin'],
-  variable: '--font-lato'
+  variable: '--font-lato',
 });
 
+// Metadata base para todo el sitio (SEO y redes sociales).
 export const metadata = {
   title: {
     default: 'Raíces de Luz | Terapias Holísticas y Cuarzos en Saltillo',
@@ -79,7 +81,8 @@ export const metadata = {
   category: 'health',
 };
 
-// JSON-LD Structured Data para negocio local
+// JSON-LD Structured Data para negocio local.
+// IMPORTANTE: Actualizar dirección, horarios y redes cuando se tenga la información final.
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'HealthAndBeautyBusiness',

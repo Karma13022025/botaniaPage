@@ -1,14 +1,33 @@
-// src/components/Tarjeta.js
 import React from 'react';
 import Image from 'next/image';
 import styles from './Tarjeta.module.css';
 
-export default function Tarjeta({ titulo, descripcion, precio, textoBoton, imagen, priority }) {
+/**
+ * Tarjeta visual reutilizable para listar servicios/productos.
+ * Acepta título, descripción, precio opcional, texto del botón e imagen optimizada con next/image.
+ */
+export default function Tarjeta({
+  titulo,
+  descripcion,
+  precio,
+  textoBoton,
+  imagen,
+  priority,
+}) {
   return (
     <div className={styles.tarjeta}>
       {imagen ? (
         <div className={styles.imagenReal}>
-          <Image src={imagen.src} alt={imagen.alt || titulo} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} quality={75} loading={priority ? 'eager' : 'lazy'} priority={priority || false} />
+          <Image
+            src={imagen.src}
+            alt={imagen.alt || titulo}
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
+            style={{ objectFit: 'cover' }}
+            quality={75}
+            loading={priority ? 'eager' : 'lazy'}
+            priority={priority || false}
+          />
         </div>
       ) : (
         <div className={styles.imagenPlaceholder}>
@@ -22,9 +41,7 @@ export default function Tarjeta({ titulo, descripcion, precio, textoBoton, image
         <p className={styles.descripcion}>{descripcion}</p>
 
         <div className={styles.footerTarjeta}>
-          {precio && (
-            <span className={styles.precio}>${precio}</span>
-          )}
+          {precio && <span className={styles.precio}>${precio}</span>}
 
           <a
             href="https://wa.me/528443921858?text=Hola%2C%20me%20interesa%20agendar%20una%20cita"
@@ -36,7 +53,6 @@ export default function Tarjeta({ titulo, descripcion, precio, textoBoton, image
           </a>
         </div>
       </div>
-
     </div>
   );
 }

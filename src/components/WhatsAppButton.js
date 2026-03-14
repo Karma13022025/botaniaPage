@@ -1,6 +1,11 @@
 'use client';
+
 import styles from './WhatsAppButton.module.css';
 
+/**
+ * Botón flotante de WhatsApp que aparece en todas las páginas.
+ * El comportamiento visual (posición, animaciones) se controla desde el CSS asociado.
+ */
 export default function WhatsAppButton() {
   return (
     <a

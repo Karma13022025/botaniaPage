@@ -3,6 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './page.module.css';
 
+/**
+ * Página de inicio (landing principal).
+ * Presenta servicios destacados, sobre nosotros, preview de cuarzos, testimonios y CTA final.
+ */
 export default function InicioTerapias() {
   return (
     <main className={styles.main}>
