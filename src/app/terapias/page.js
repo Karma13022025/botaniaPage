@@ -94,6 +94,20 @@ export default function Terapias() {
           />
 
           <Tarjeta
+            titulo="Masaje Lomi Lomi"
+            descripcion="Técnica de origen hawaiano con movimientos largos y envolventes que generan profunda relajación física y emocional."
+            textoBoton="Agendar Masaje"
+            imagen={{ src: '/images/terapias/masaje-lomi.webp', alt: 'Masaje Lomi Lomi' }}
+          />
+
+          <Tarjeta
+            titulo="Masaje de pies"
+            descripcion="Masaje focalizado en pies y plantas que ayuda a aliviar cansancio, mejorar la circulación y relajar todo el cuerpo."
+            textoBoton="Agendar Masaje"
+            imagen={{ src: '/images/terapias/masaje-pies.webp', alt: 'Masaje de pies' }}
+          />
+
+          <Tarjeta
             titulo="Masaje de Tejido Profundo"
             descripcion="Presión firme y profunda para llegar a las capas más internas del músculo. Excelente para deportistas o dolor crónico severo."
             textoBoton="Agendar Sesión"
