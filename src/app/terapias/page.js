@@ -10,7 +10,7 @@ export const metadata = {
   alternates: { canonical: '/terapias' },
   openGraph: {
     title: 'Terapias Holísticas | Raíces de Luz',
-    description: 'Masajes, piedras calientes, chakras, reiki, aromaterapia y reflexología. Agenda tu sesión personalizada.',
+    description: 'Masajes, piedras calientes, chakras, radiestesia, reiki, aromaterapia y reflexología. Agenda tu sesión personalizada.',
     url: '/terapias',
   },
 };
@@ -113,6 +113,14 @@ export default function Terapias() {
             textoBoton="Agendar Sesión"
             imagen={{ src: '/images/terapias/masajetejidoprofundo2.webp', alt: 'Masaje de Tejido Profundo' }}
           />
+
+          <Tarjeta
+            titulo="Radiestesia con pendulo"
+            descripcion="Técnica de diagnóstico y tratamiento que utiliza un pendulo para detectar desequilibrios energéticos en el cuerpo."
+            textoBoton="Agendar Sesión"
+            imagen={{ src: '/images/terapias/radiestesia.webp', alt: 'Radiestesia con pendulo' }}
+          />
+
         </div>
       </section>
 
