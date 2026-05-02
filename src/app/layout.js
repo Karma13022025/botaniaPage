@@ -60,9 +60,9 @@ export const metadata = {
     siteName: 'Raíces de Luz',
     images: [
       {
-        url: '/ímages/relajante2.webp', 
-        width: 1200,
-        height: 630,
+        url: '/ímages/grapView.png', 
+        width: 800,
+        height: 600,
       },
     ],
     locale: 'es_MX',
