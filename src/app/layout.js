@@ -58,6 +58,13 @@ export const metadata = {
     description: 'Descubre el poder de los cuarzos y las terapias holísticas. Masajes, chakras, aromaterapia y más. Agenda tu cita.',
     url: 'https://raicesdeluz.com',
     siteName: 'Raíces de Luz',
+    images: [
+      {
+        url: '/vista-previa.jpg', // El nombre de la imagen que guardaste en la carpeta public
+        width: 1200,
+        height: 630,
+      },
+    ],
     locale: 'es_MX',
     type: 'website',
   },
