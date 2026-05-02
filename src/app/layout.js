@@ -60,7 +60,7 @@ export const metadata = {
     siteName: 'Raíces de Luz',
     images: [
       {
-        url: '/vista-previa.jpg', // El nombre de la imagen que guardaste en la carpeta public
+        url: '/ímages/relajante2.webp', 
         width: 1200,
         height: 630,
       },
